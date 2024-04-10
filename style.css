@@ -1,0 +1,8 @@
+body{
+background: rgb(26,49,171);
+background: radial-gradient(circle, rgba(26,49,171,1) 0%, rgba(166,35,61,1) 100%);
+}
+*{
+    color: white;
+    font-family: 'Tisa Sans Pro Regular', Arial, Helvetica, sans-serif
+}
