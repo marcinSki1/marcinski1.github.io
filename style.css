@@ -6,3 +6,35 @@ background: radial-gradient(circle, rgba(26,49,171,1) 0%, rgba(166,35,61,1) 100%
     color: white;
     font-family: 'Tisa Sans Pro Regular', Arial, Helvetica, sans-serif
 }
+.container{
+    width: auto;
+    margin: auto; /* div wysrodkowany? how??? */
+}
+h1{
+    text-align: center;
+    font-weight: 100;
+    animation: zoomin 0.5s;
+}
+.tile{
+    width: 240px;
+    height: 240px;
+    background: rgb(87, 85, 85);
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* wtf */
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+.tile a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: block;
+}
+.tile:hover{
+    box-shadow: 0 0 0 5px white;
+    filter: brightness(120%);
+    transform: scale(1.1);
+}
