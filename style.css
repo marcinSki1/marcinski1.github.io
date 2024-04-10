@@ -42,3 +42,70 @@ h1{
     font-size: 60px;
     margin-top: 10px;
 }
+.icon{
+    font-size: 150px;
+    text-align: center;
+    grid-area: icon;
+}
+.box{
+    width: 800px;
+    height: 800px;
+    background: rgb(87, 85, 85);
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center; /* wtf */
+    transition: all 0.3s;
+    border-radius: 10px;
+
+    grid-template-areas: 
+    ". opp opp ."
+    ". gun gun ."
+    "player player player player";
+}
+.rtbox{
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+    flex-direction: column;
+}
+.opp{
+    grid-area: opp;
+}
+.gun{
+    grid-area: gun;
+}
+.player{
+    grid-area: player;
+    display: grid;
+    grid-template-areas: 
+    "name icon icon you"
+    "name icon icon opp";
+    gap: 10px;
+}
+button{
+    border: none;
+    padding: 10px 25px;
+    border-radius: 15px;
+    background: rgb(44, 44, 44);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+button:hover{
+    background: rgb(116, 116, 116);
+}
+button:active{
+    background: black;
+}
+.opponent{
+    grid-area: opp;
+}
+.you{
+    grid-area: you;
+    
+}
+.youname{
+    grid-area: name;
+}
