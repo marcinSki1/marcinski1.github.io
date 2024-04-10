@@ -38,3 +38,7 @@ h1{
     filter: brightness(120%);
     transform: scale(1.1);
 }
+.tile .fa{
+    font-size: 60px;
+    margin-top: 10px;
+}
