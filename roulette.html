@@ -6,25 +6,47 @@
     <title>Roulette</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/5fc9fc5794.js" crossorigin="anonymous"></script>
-    <script src="roulette.js"></script>
 </head>
 <body>
 <div class="container rtbox">
 
-    <h1>Roulette (not working)</h1>
+    <h1>Russian Roulette 
+        <details>
+            <summary>(BETA)</summary>
+            <span>There are no animations and opponents turn</span>
+        </details>
+    </h1>
 
-    <div class="box">
+    <button id="play" onclick="start()">Play Game</button>
+
+    <div id="box">
         <div class="opp"><i class="fa fa-user-tie icon"></i></div>
+
+        <div class="opphp">
+            <p>Opponent</p>
+            <p>Health:</p>
+            <p id="opphp"></p>
+        </div>
 
         <div class="gun"><i class="fa fa-gun icon"></i></div>
 
+        <div class="bullets">
+            <p>Live Rounds: </p><p id="liveRounds"></p><br>
+            <p>Blanks: </p><p id="blanks"></p>
+        </div>
+
         <div class="player">
             <i class="fa fa-user icon"></i>
-            <button class="you">Shot Yourself</button>
-            <button class="opponent">Shot Opponent</button>
-            <div class="youname">You</div>
+            <button class="you" onclick="shotYourself()">Shot Yourself</button>
+            <button class="opponent" onclick="shotOpponent()">Shot Opponent</button>
+            <div class="youhp">
+                <p>You</p>
+                <p>Health:</p>
+                <p id="youhp"></p>
+            </div>
         </div>
     
     </div>
+<script src="roulette.js"></script>
 </body>
 </html>
