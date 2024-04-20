@@ -1,32 +1,31 @@
-const SCREEN_WIDTH = window.screen.availWidth
-const SCREEN_HEIGHT = window.screen.availHeight
-const VELOCITY = 15
-const MARGIN = 15
-const TOP_MARGIN = 50
-const TICK_LENGTH = 50
+const screenWidth = window.screen.availWidth;
+const screenHeight = window.screen.availHeight;
+const windowWidth = 400; // Szerokość nowego okna
+const windowHeight = 300; // Wysokość nowego okna
+const velocity = 15;
 
-
+let x = 0;
+let y = 0;
+let vx = velocity;
+let vy = velocity;
 
 function moveWindowBounce() {
-    let vx = VELOCITY * (Math.random() > 0.5 ? 1 : -1)
-    let vy = VELOCITY * (Math.random() > 0.5 ? 1 : -1)
-
-  
     setInterval(() => {
-      const x = window.screenX
-      const y = window.screenY
-      const width = window.outerWidth
-      const height = window.outerHeight
-  
-      if (x < MARGIN) vx = Math.abs(vx)
-      if (x + width > SCREEN_WIDTH - MARGIN) vx = -1 * Math.abs(vx)
-      if (y < TOP_MARGIN) vy = Math.abs(vy)
-      if (y + height > SCREEN_HEIGHT - MARGIN) vy = -1 * Math.abs(vy)
-  
-      window.moveBy(vx, vy)
-    }, TICK_LENGTH)
+        if (x <= 0 || x + windowWidth >= screenWidth) {
+            vx *= -1;
+        }
+        if (y <= 0 || y + windowHeight >= screenHeight) {
+            vy *= -1;
+        }
+
+        x += vx;
+        y += vy;
+
+        window.moveTo(x, y);
+    }, 100);
 }
 
 moveWindowBounce();
+
 
 
